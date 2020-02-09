@@ -1,0 +1,6 @@
+/cmake-*
+/.idea
+/public/yoga.js
+/public/yoga.wasm
+*.swp
+*.o
