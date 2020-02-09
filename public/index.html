@@ -11,9 +11,27 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
+    <style>
+        body {
+            height: 100%;
+        }
+        header {
+            position: sticky;
+            top:0;
+            z-index: 10;
+            background: white;
+        }
+        #holder {
+
+        }
+    </style>
 </head>
 <body>
-<header><h1>Wasm</h1></header>
+<header>
+    <h1>Wasm</h1>
+    <button class="btn btn-primary" onclick="document.getElementById('holder').innerHTML=''">Clear</button>
+    <button class="btn btn-warning" onclick="Module.ccall('custom_func', null, null, null)">custom_func</button>
+</header>
 <section id="holder">
 </section>
 <script type="application/javascript">
